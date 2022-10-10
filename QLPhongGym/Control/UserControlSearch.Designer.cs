@@ -47,6 +47,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnCustomerInformation = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtCustomerPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
@@ -59,11 +60,9 @@
             this.btnDesSort = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnAscSort = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.dgvCustomer = new System.Windows.Forms.DataGridView();
-            this.eventLog1 = new System.Diagnostics.EventLog();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,8 +70,9 @@
             this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnSearch = new Bunifu.Framework.UI.BunifuImageButton();
+            this.eventLog1 = new System.Diagnostics.EventLog();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -83,13 +83,13 @@
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDesSort)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAscSort)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -295,6 +295,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.LightBlue;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageActive = null;
+            this.btnSearch.Location = new System.Drawing.Point(267, 176);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(109, 35);
+            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.TabStop = false;
+            this.btnSearch.Zoom = 10;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // txtCustomerPhoneNumber
             // 
             this.txtCustomerPhoneNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -428,6 +442,18 @@
             this.panel3.Size = new System.Drawing.Size(1151, 52);
             this.panel3.TabIndex = 4;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label7.Font = new System.Drawing.Font("Calibri", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(934, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 27);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Số lượng";
+            // 
             // txtTotal
             // 
             this.txtTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -466,16 +492,6 @@
             this.dgvCustomer.Size = new System.Drawing.Size(1158, 332);
             this.dgvCustomer.TabIndex = 3;
             this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
-            // 
-            // eventLog1
-            // 
-            this.eventLog1.SynchronizingObject = this;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Number
             // 
@@ -553,31 +569,15 @@
             this.Address.ReadOnly = true;
             this.Address.Width = 275;
             // 
-            // label7
+            // eventLog1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label7.Font = new System.Drawing.Font("Calibri", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(934, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 27);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Số lượng";
+            this.eventLog1.SynchronizingObject = this;
             // 
-            // btnSearch
+            // contextMenuStrip1
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.LightBlue;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageActive = null;
-            this.btnSearch.Location = new System.Drawing.Point(267, 176);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(109, 35);
-            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.TabStop = false;
-            this.btnSearch.Zoom = 10;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // UserControlSearch
             // 
@@ -598,6 +598,7 @@
             this.panel7.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnDesSort)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAscSort)).EndInit();
@@ -605,7 +606,6 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             this.ResumeLayout(false);
 
         }

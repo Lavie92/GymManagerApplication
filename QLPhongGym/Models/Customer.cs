@@ -20,7 +20,10 @@ namespace QLPhongGym.Models
         public string CustomerID { get; set; }
 
         [StringLength(50)]
-        public string CustomerName { get; set; }
+        public string CustomerFirstName { get; set; }
+
+        [StringLength(50)]
+        public string CustomerLastName { get; set; }
 
         [StringLength(10)]
         public string Gender { get; set; }

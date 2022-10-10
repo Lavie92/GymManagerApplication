@@ -36,6 +36,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbxGymSubscription = new System.Windows.Forms.ComboBox();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.dtpExpired = new System.Windows.Forms.DateTimePicker();
             this.dtpCreateDate = new System.Windows.Forms.DateTimePicker();
@@ -51,22 +52,23 @@
             this.txtInvoiceID = new System.Windows.Forms.TextBox();
             this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.radioFemale = new System.Windows.Forms.RadioButton();
+            this.radioMale = new System.Windows.Forms.RadioButton();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.txtCustomerFirstName = new System.Windows.Forms.TextBox();
+            this.txtCustomerLastName = new System.Windows.Forms.TextBox();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUpdate = new Bunifu.Framework.UI.BunifuFlatButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.radioMale = new System.Windows.Forms.RadioButton();
-            this.radioFemale = new System.Windows.Forms.RadioButton();
-            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.cbxGymSubscription = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -84,7 +86,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(872, 63);
+            this.panel1.Size = new System.Drawing.Size(1184, 63);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -122,7 +124,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 63);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(872, 507);
+            this.panel2.Size = new System.Drawing.Size(1184, 644);
             this.panel2.TabIndex = 1;
             // 
             // panel4
@@ -132,7 +134,7 @@
             this.panel4.Location = new System.Drawing.Point(782, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(90, 507);
+            this.panel4.Size = new System.Drawing.Size(402, 644);
             this.panel4.TabIndex = 3;
             // 
             // panel3
@@ -147,7 +149,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(782, 507);
+            this.panel3.Size = new System.Drawing.Size(782, 644);
             this.panel3.TabIndex = 0;
             // 
             // groupBox2
@@ -173,10 +175,18 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(430, 336);
+            this.groupBox2.Size = new System.Drawing.Size(430, 440);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin gói tập";
+            // 
+            // cbxGymSubscription
+            // 
+            this.cbxGymSubscription.FormattingEnabled = true;
+            this.cbxGymSubscription.Location = new System.Drawing.Point(124, 43);
+            this.cbxGymSubscription.Name = "cbxGymSubscription";
+            this.cbxGymSubscription.Size = new System.Drawing.Size(121, 27);
+            this.cbxGymSubscription.TabIndex = 5;
             // 
             // dtpEndDate
             // 
@@ -187,29 +197,31 @@
             this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(109, 27);
-            this.dtpEndDate.TabIndex = 2;
+            this.dtpEndDate.TabIndex = 7;
             // 
             // dtpExpired
             // 
+            this.dtpExpired.CustomFormat = "dd/MM/yyyy";
             this.dtpExpired.Enabled = false;
             this.dtpExpired.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpExpired.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpExpired.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpExpired.Location = new System.Drawing.Point(302, 138);
             this.dtpExpired.Margin = new System.Windows.Forms.Padding(2);
             this.dtpExpired.Name = "dtpExpired";
             this.dtpExpired.Size = new System.Drawing.Size(109, 27);
-            this.dtpExpired.TabIndex = 2;
+            this.dtpExpired.TabIndex = 9;
             // 
             // dtpCreateDate
             // 
+            this.dtpCreateDate.CustomFormat = "dd/MM/yyyy";
             this.dtpCreateDate.Enabled = false;
             this.dtpCreateDate.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCreateDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpCreateDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpCreateDate.Location = new System.Drawing.Point(124, 138);
             this.dtpCreateDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpCreateDate.Name = "dtpCreateDate";
             this.dtpCreateDate.Size = new System.Drawing.Size(109, 27);
-            this.dtpCreateDate.TabIndex = 2;
+            this.dtpCreateDate.TabIndex = 8;
             this.dtpCreateDate.Value = new System.DateTime(2022, 10, 7, 18, 35, 21, 0);
             // 
             // dtpStartDate
@@ -221,14 +233,14 @@
             this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(109, 27);
-            this.dtpStartDate.TabIndex = 2;
+            this.dtpStartDate.TabIndex = 6;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(22, 203);
+            this.label11.Location = new System.Drawing.Point(22, 196);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(92, 19);
@@ -240,7 +252,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(7, 249);
+            this.label12.Location = new System.Drawing.Point(4, 244);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(110, 19);
@@ -312,7 +324,7 @@
             this.txtRemaining.Enabled = false;
             this.txtRemaining.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemaining.ForeColor = System.Drawing.Color.Red;
-            this.txtRemaining.Location = new System.Drawing.Point(124, 243);
+            this.txtRemaining.Location = new System.Drawing.Point(124, 241);
             this.txtRemaining.Margin = new System.Windows.Forms.Padding(2);
             this.txtRemaining.Name = "txtRemaining";
             this.txtRemaining.ReadOnly = true;
@@ -325,7 +337,7 @@
             this.txtInvoiceID.Enabled = false;
             this.txtInvoiceID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInvoiceID.ForeColor = System.Drawing.Color.Black;
-            this.txtInvoiceID.Location = new System.Drawing.Point(124, 196);
+            this.txtInvoiceID.Location = new System.Drawing.Point(124, 188);
             this.txtInvoiceID.Margin = new System.Windows.Forms.Padding(2);
             this.txtInvoiceID.Name = "txtInvoiceID";
             this.txtInvoiceID.ReadOnly = true;
@@ -354,7 +366,7 @@
             this.btnClose.IconVisible = true;
             this.btnClose.IconZoom = 90D;
             this.btnClose.IsTab = false;
-            this.btnClose.Location = new System.Drawing.Point(253, 444);
+            this.btnClose.Location = new System.Drawing.Point(236, 542);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Normalcolor = System.Drawing.Color.Plum;
@@ -362,7 +374,7 @@
             this.btnClose.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnClose.selected = false;
             this.btnClose.Size = new System.Drawing.Size(111, 48);
-            this.btnClose.TabIndex = 8;
+            this.btnClose.TabIndex = 10;
             this.btnClose.Text = "Đóng";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Textcolor = System.Drawing.Color.Black;
@@ -377,11 +389,13 @@
             this.groupBox1.Controls.Add(this.radioMale);
             this.groupBox1.Controls.Add(this.txtPhoneNumber);
             this.groupBox1.Controls.Add(this.txtAddress);
-            this.groupBox1.Controls.Add(this.txtCustomerName);
+            this.groupBox1.Controls.Add(this.txtCustomerFirstName);
+            this.groupBox1.Controls.Add(this.txtCustomerLastName);
             this.groupBox1.Controls.Add(this.txtCustomerID);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -391,43 +405,83 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(325, 336);
+            this.groupBox1.Size = new System.Drawing.Size(325, 440);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
+            // 
+            // dtpBirthDate
+            // 
+            this.dtpBirthDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpBirthDate.Location = new System.Drawing.Point(128, 238);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(167, 27);
+            this.dtpBirthDate.TabIndex = 2;
+            // 
+            // radioFemale
+            // 
+            this.radioFemale.AutoSize = true;
+            this.radioFemale.Location = new System.Drawing.Point(219, 196);
+            this.radioFemale.Name = "radioFemale";
+            this.radioFemale.Size = new System.Drawing.Size(47, 23);
+            this.radioFemale.TabIndex = 3;
+            this.radioFemale.TabStop = true;
+            this.radioFemale.Text = "Nữ";
+            this.radioFemale.UseVisualStyleBackColor = true;
+            // 
+            // radioMale
+            // 
+            this.radioMale.AutoSize = true;
+            this.radioMale.Location = new System.Drawing.Point(128, 196);
+            this.radioMale.Name = "radioMale";
+            this.radioMale.Size = new System.Drawing.Size(57, 23);
+            this.radioMale.TabIndex = 2;
+            this.radioMale.TabStop = true;
+            this.radioMale.Text = "Nam";
+            this.radioMale.UseVisualStyleBackColor = true;
             // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(130, 219);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(130, 290);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.ReadOnly = true;
             this.txtPhoneNumber.Size = new System.Drawing.Size(167, 27);
-            this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.TabIndex = 3;
             // 
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.ForeColor = System.Drawing.Color.Black;
-            this.txtAddress.Location = new System.Drawing.Point(130, 268);
+            this.txtAddress.Location = new System.Drawing.Point(130, 345);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(167, 27);
-            this.txtAddress.TabIndex = 3;
+            this.txtAddress.TabIndex = 4;
             // 
-            // txtCustomerName
+            // txtCustomerFirstName
             // 
-            this.txtCustomerName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.ForeColor = System.Drawing.Color.Black;
-            this.txtCustomerName.Location = new System.Drawing.Point(130, 83);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.ReadOnly = true;
-            this.txtCustomerName.Size = new System.Drawing.Size(167, 27);
-            this.txtCustomerName.TabIndex = 1;
+            this.txtCustomerFirstName.AcceptsTab = true;
+            this.txtCustomerFirstName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerFirstName.ForeColor = System.Drawing.Color.Black;
+            this.txtCustomerFirstName.Location = new System.Drawing.Point(128, 96);
+            this.txtCustomerFirstName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCustomerFirstName.Name = "txtCustomerFirstName";
+            this.txtCustomerFirstName.Size = new System.Drawing.Size(167, 27);
+            this.txtCustomerFirstName.TabIndex = 0;
+            // 
+            // txtCustomerLastName
+            // 
+            this.txtCustomerLastName.AcceptsTab = true;
+            this.txtCustomerLastName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerLastName.ForeColor = System.Drawing.Color.Black;
+            this.txtCustomerLastName.Location = new System.Drawing.Point(128, 145);
+            this.txtCustomerLastName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCustomerLastName.Name = "txtCustomerLastName";
+            this.txtCustomerLastName.Size = new System.Drawing.Size(167, 27);
+            this.txtCustomerLastName.TabIndex = 1;
             // 
             // txtCustomerID
             // 
@@ -445,7 +499,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(23, 225);
+            this.label7.Location = new System.Drawing.Point(23, 296);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 19);
@@ -457,7 +511,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(64, 275);
+            this.label6.Location = new System.Drawing.Point(61, 348);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 19);
@@ -469,19 +523,31 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(46, 172);
+            this.label5.Location = new System.Drawing.Point(46, 238);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 19);
             this.label5.TabIndex = 0;
             this.label5.Text = "Ngày sinh:";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(23, 99);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(96, 19);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Họ và tên lót:";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(52, 131);
+            this.label4.Location = new System.Drawing.Point(50, 196);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 19);
@@ -493,12 +559,12 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(46, 89);
+            this.label3.Location = new System.Drawing.Point(5, 145);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 19);
+            this.label3.Size = new System.Drawing.Size(114, 19);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Họ và tên:";
+            this.label3.Text = "Tên khách hàng:";
             // 
             // label2
             // 
@@ -533,58 +599,19 @@
             this.btnUpdate.IconVisible = true;
             this.btnUpdate.IconZoom = 90D;
             this.btnUpdate.IsTab = false;
-            this.btnUpdate.Location = new System.Drawing.Point(370, 444);
+            this.btnUpdate.Location = new System.Drawing.Point(353, 542);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Normalcolor = System.Drawing.Color.Plum;
             this.btnUpdate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnUpdate.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnUpdate.selected = false;
             this.btnUpdate.Size = new System.Drawing.Size(129, 48);
-            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Cập nhập";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdate.Textcolor = System.Drawing.Color.Black;
             this.btnUpdate.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // radioMale
-            // 
-            this.radioMale.AutoSize = true;
-            this.radioMale.Location = new System.Drawing.Point(130, 131);
-            this.radioMale.Name = "radioMale";
-            this.radioMale.Size = new System.Drawing.Size(57, 23);
-            this.radioMale.TabIndex = 2;
-            this.radioMale.TabStop = true;
-            this.radioMale.Text = "Nam";
-            this.radioMale.UseVisualStyleBackColor = true;
-            // 
-            // radioFemale
-            // 
-            this.radioFemale.AutoSize = true;
-            this.radioFemale.Location = new System.Drawing.Point(221, 131);
-            this.radioFemale.Name = "radioFemale";
-            this.radioFemale.Size = new System.Drawing.Size(47, 23);
-            this.radioFemale.TabIndex = 3;
-            this.radioFemale.TabStop = true;
-            this.radioFemale.Text = "Nữ";
-            this.radioFemale.UseVisualStyleBackColor = true;
-            // 
-            // dtpBirthDate
-            // 
-            this.dtpBirthDate.CustomFormat = "dd/MM/yyyy";
-            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBirthDate.Location = new System.Drawing.Point(128, 172);
-            this.dtpBirthDate.Name = "dtpBirthDate";
-            this.dtpBirthDate.Size = new System.Drawing.Size(167, 27);
-            this.dtpBirthDate.TabIndex = 4;
-            // 
-            // cbxGymSubscription
-            // 
-            this.cbxGymSubscription.FormattingEnabled = true;
-            this.cbxGymSubscription.Location = new System.Drawing.Point(124, 43);
-            this.cbxGymSubscription.Name = "cbxGymSubscription";
-            this.cbxGymSubscription.Size = new System.Drawing.Size(121, 27);
-            this.cbxGymSubscription.TabIndex = 4;
             // 
             // UserControlInformation
             // 
@@ -594,7 +621,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserControlInformation";
-            this.Size = new System.Drawing.Size(872, 570);
+            this.Size = new System.Drawing.Size(1184, 707);
             this.Load += new System.EventHandler(this.UserControlInformation_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -615,16 +642,11 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Bunifu.Framework.UI.BunifuFlatButton btnClose;
         private Bunifu.Framework.UI.BunifuFlatButton btnUpdate;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dtpEndDate;
-        private System.Windows.Forms.DateTimePicker dtpExpired;
-        private System.Windows.Forms.DateTimePicker dtpCreateDate;
-        private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
@@ -632,22 +654,29 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtRemaining;
-        private System.Windows.Forms.TextBox txtInvoiceID;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtPhoneNumber;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtCustomerName;
-        private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtpBirthDate;
-        private System.Windows.Forms.RadioButton radioFemale;
-        private System.Windows.Forms.RadioButton radioMale;
-        private System.Windows.Forms.ComboBox cbxGymSubscription;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.TextBox txtCustomerID;
+        public System.Windows.Forms.DateTimePicker dtpEndDate;
+        public System.Windows.Forms.DateTimePicker dtpExpired;
+        public System.Windows.Forms.DateTimePicker dtpCreateDate;
+        public System.Windows.Forms.DateTimePicker dtpStartDate;
+        public System.Windows.Forms.TextBox txtRemaining;
+        public System.Windows.Forms.TextBox txtInvoiceID;
+        public System.Windows.Forms.TextBox txtPhoneNumber;
+        public System.Windows.Forms.TextBox txtAddress;
+        public System.Windows.Forms.TextBox txtCustomerLastName;
+        public System.Windows.Forms.DateTimePicker dtpBirthDate;
+        public System.Windows.Forms.RadioButton radioFemale;
+        public System.Windows.Forms.RadioButton radioMale;
+        public System.Windows.Forms.ComboBox cbxGymSubscription;
+        public System.Windows.Forms.TextBox txtCustomerFirstName;
+        private System.Windows.Forms.Label label15;
     }
 }

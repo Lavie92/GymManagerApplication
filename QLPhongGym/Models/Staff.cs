@@ -22,7 +22,10 @@ namespace QLPhongGym.Models
         public string StaffID { get; set; }
 
         [StringLength(50)]
-        public string StaffName { get; set; }
+        public string StaffFirstName { get; set; }
+
+        [StringLength(50)]
+        public string StaffLastName { get; set; }
 
         [StringLength(10)]
         public string Position { get; set; }

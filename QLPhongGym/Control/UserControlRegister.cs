@@ -28,69 +28,75 @@ namespace QLPhongGym.Control
         {
             try
             {
+                string value = DateTime.Now.ToFileTime().ToString();
                 var customerUpdate = gaYeuMeoContext.Customers.FirstOrDefault(x => x.CustomerID == txtCustomerID.Text);
                 if (customerUpdate == null)
                 {
-                    //add customer
-                    if (string.IsNullOrEmpty(txtCustomerID.Text) || string.IsNullOrEmpty(txtCustomerName.Text) || string.IsNullOrEmpty(txtPhoneNumber.Text) || string.IsNullOrEmpty(txtAddress.Text))
+                    ///add customer
+                    if (string.IsNullOrEmpty(txtCustomerLastName.Text) || string.IsNullOrEmpty(txtPhoneNumber.Text) || string.IsNullOrEmpty(txtAddress.Text))
                     {
                         throw new Exception("Nhập đầy đủ thông tin khách hàng!");
                     }
-                    Customer customer = new Customer();
-                    customer.CustomerID = txtCustomerID.Text;
-                    customer.CustomerName = txtCustomerName.Text;
-                    customer.Gender = radioFemale.Checked ? "Nữ" : "Nam";
-                    customer.DateOfBirth = dtpBirthDate.Value;
-                    customer.Phone = txtPhoneNumber.Text;
-                    customer.Address = txtAddress.Text;
-                    gaYeuMeoContext.Customers.Add(customer);
-                    gaYeuMeoContext.SaveChanges();
-                    //add invoice
-                    var invoiceUpdate = gaYeuMeoContext.Invoices.FirstOrDefault(x => x.InvoiceID == txtInvoiceID.Text);
-                    if (invoiceUpdate != null)
-                    {
-                        throw new Exception("Mã hoá đơn đã tồn tại");
-                    }
-                    else if (string.IsNullOrEmpty(txtInvoiceID.Text) || string.IsNullOrEmpty(txtDuration.Text))
-                    {
-                        throw new Exception("Vui lòng nhập đầy đủ thông tin hoá đơn");                  
-                        gaYeuMeoContext.Customers.Remove(customerUpdate);
-                        gaYeuMeoContext.SaveChanges();
-                    }
                     else
                     {
-                        Invoice invoice = new Invoice();
-                        invoice.CustomerID = txtCustomerID.Text;
-                        invoice.InvoiceID = txtInvoiceID.Text;
-                        string subscriptionID = (string)cbxSubscription.SelectedValue;
-                        invoice.SubscriptionID = subscriptionID;
-                        invoice.CreateDate = DateTime.Now;
-                        var total = gaYeuMeoContext.GymSubscriptions.FirstOrDefault(x => x.SubscriptionID == subscriptionID);
-                        invoice.Total = (double)total.Price;
-                        gaYeuMeoContext.Invoices.Add(invoice);
-                        txtTotal.Text = total.Price.ToString();
+                        Customer customer = new Customer();
+                        customer.CustomerID = "KH" + value.Substring(value.Length - 8, 8);
+                        customer.CustomerFirstName = txtCustomerFirstName.Text;
+                        customer.CustomerLastName = txtCustomerLastName.Text;
+                        customer.Gender = radioFemale.Checked ? "Nữ" : "Nam";
+                        customer.DateOfBirth = dtpBirthDate.Value;
+                        customer.Phone = txtPhoneNumber.Text;
+                        customer.Address = txtAddress.Text;
+                        gaYeuMeoContext.Customers.Add(customer);
+                        txtCustomerID.Text = customer.CustomerID;
+                        gaYeuMeoContext.SaveChanges();
+                        //add invoice
+                        var invoiceUpdate = gaYeuMeoContext.Invoices.FirstOrDefault(x => x.InvoiceID == txtInvoiceID.Text);
+                        if (invoiceUpdate == null)
+                        {
+                            Invoice invoice = new Invoice();
+                            invoice.InvoiceID = "HD" + value.Substring(value.Length - 8, 8);
+                            invoice.CustomerID = txtCustomerID.Text;
+                            string subscriptionID = (string)cbxSubscription.SelectedValue;
+                            invoice.SubscriptionID = subscriptionID;
+                            invoice.CreateDate = DateTime.Now;
+                            var total = gaYeuMeoContext.GymSubscriptions.FirstOrDefault(x => x.SubscriptionID == subscriptionID);
+                            invoice.Total = (double)total.Price;
+                            gaYeuMeoContext.Invoices.Add(invoice);
+                            txtTotal.Text = total.Price.ToString();
+                            txtInvoiceID.Text = invoice.InvoiceID;
+                            gaYeuMeoContext.SaveChanges();
+                        }
+
+                        else if (string.IsNullOrEmpty(txtDuration.Text))
+                        {
+                            throw new Exception("Vui lòng nhập đầy đủ thông tin hoá đơn");
+                            //gaYeuMeoContext.Customers.Remove(customerUpdate);
+
+                        }
+                        //add card
+                        Card card = new Card();
+                        card.CardID = txtInvoiceID.Text;
+                        card.CustomerID = txtCustomerID.Text;
+                        card.ReceiveDay = DateTime.Now;
+                        card.ExpirationDay = card.ReceiveDay.Value.AddMonths(Convert.ToInt32(txtDuration.Text));
+                        gaYeuMeoContext.Cards.Add(card);
+                        gaYeuMeoContext.SaveChanges();
+                        MessageBox.Show("Thêm Khách hàng thành công");
+                        txtCustomerID.Text = "";
+                        txtCustomerFirstName.Text = "";
+                        txtCustomerLastName.Text = "";
+                        txtAddress.Text = "";
+                        dtpBirthDate.Value = DateTime.Now;
+                        txtInvoiceID.Text = "";
+                        txtPhoneNumber.Text = "";
+                        txtTotal.Text = "";
+                        txtDuration.Text = "";
+                        dtpExpirationDay.Value = DateTime.Now;
+                        dateTimePicker1.Value = DateTime.Now;
+                        dateTimePicker3.Value = DateTime.Now;
+                        dateTimePicker4.Value = DateTime.Now;
                     }
-                    //add card
-                    Card card = new Card();
-                    card.CardID = txtInvoiceID.Text;
-                    card.CustomerID = txtCustomerID.Text;
-                    card.ReceiveDay = DateTime.Now;
-                    card.ExpirationDay = card.ReceiveDay.Value.AddDays(Convert.ToDouble( txtDuration.Text) * 30);
-                    gaYeuMeoContext.Cards.Add(card);
-                    gaYeuMeoContext.SaveChanges();
-                    MessageBox.Show("Thêm Khách hàng thành công");
-                    txtCustomerID.Text = "";
-                    txtCustomerName.Text = "";
-                    txtInvoiceID.Text = "";
-                    txtPhoneNumber.Text = "";
-                    txtTotal.Text = "";
-                    txtAddress.Text = "";
-                    txtDuration.Text = "";
-                    dtpBirthDate.Value = DateTime.Now;
-                    dtpExpirationDay.Value = DateTime.Now;
-                    dateTimePicker1.Value = DateTime.Now;
-                    dateTimePicker3.Value = DateTime.Now;
-                    dateTimePicker4.Value = DateTime.Now;
                 }
                 else
                 {
@@ -101,7 +107,7 @@ namespace QLPhongGym.Control
             {
 
                 MessageBox.Show(ex.Message);
-                
+
             }
         }
 
@@ -109,8 +115,10 @@ namespace QLPhongGym.Control
         {
             if (!string.IsNullOrEmpty(txtDuration.Text))
             {
-                dtpExpirationDay.Value = DateTime.Now.AddDays(30 * Convert.ToDouble(txtDuration.Text));
+                dtpExpirationDay.Value = DateTime.Now.AddMonths(Convert.ToInt32(txtDuration.Text));
             }
         }
+
+
     }
 }

@@ -16,5 +16,16 @@ namespace QLPhongGym.Control
         {
             InitializeComponent();
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            //long ticks = DateTime.Now.Ticks;
+            //byte[] bytes = BitConverter.GetBytes(ticks);
+            //string id = Convert.ToBase64String(bytes)
+            //                        .Replace('+', '_')
+            //                        .Replace('/', '-')
+            //                        .TrimEnd('=');
+            //MessageBox.Show(id);
+        }
     }
 }

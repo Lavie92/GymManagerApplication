@@ -54,9 +54,10 @@
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(1025, 0);
+            this.panel3.Location = new System.Drawing.Point(769, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(127, 793);
+            this.panel3.Size = new System.Drawing.Size(95, 644);
             this.panel3.TabIndex = 2;
             // 
             // panel1
@@ -64,8 +65,9 @@
             this.panel1.Controls.Add(this.bunifuFlatButton3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1025, 134);
+            this.panel1.Size = new System.Drawing.Size(769, 109);
             this.panel1.TabIndex = 0;
             // 
             // bunifuFlatButton3
@@ -89,14 +91,13 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(302, 59);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(226, 48);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.LavenderBlush;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.LavenderBlush;
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.DeepPink;
             this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(426, 59);
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(320, 48);
             this.bunifuFlatButton3.TabIndex = 7;
             this.bunifuFlatButton3.Text = "Tạo tài khoản";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,8 +112,9 @@
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1025, 793);
+            this.panel2.Size = new System.Drawing.Size(769, 644);
             this.panel2.TabIndex = 1;
             // 
             // bunifuFlatButton2
@@ -136,15 +138,14 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(369, 504);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(277, 410);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(245, 59);
-            this.bunifuFlatButton2.TabIndex = 6;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(184, 48);
+            this.bunifuFlatButton2.TabIndex = 5;
             this.bunifuFlatButton2.Text = "Thêm tài khoản";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
@@ -165,9 +166,11 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Calibri Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DeepPink;
-            this.groupBox1.Location = new System.Drawing.Point(37, 140);
+            this.groupBox1.Location = new System.Drawing.Point(28, 114);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(955, 319);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(716, 259);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo tài khoản";
@@ -176,55 +179,61 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Calibri Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(231, 135);
+            this.comboBox2.Location = new System.Drawing.Point(173, 110);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(241, 36);
-            this.comboBox2.TabIndex = 13;
+            this.comboBox2.Size = new System.Drawing.Size(182, 30);
+            this.comboBox2.TabIndex = 1;
             // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Calibri Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(231, 226);
+            this.comboBox1.Location = new System.Drawing.Point(173, 184);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(241, 36);
-            this.comboBox1.TabIndex = 12;
+            this.comboBox1.Size = new System.Drawing.Size(182, 30);
+            this.comboBox1.TabIndex = 2;
             // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Calibri Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(676, 135);
+            this.textBox4.Location = new System.Drawing.Point(507, 110);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(252, 36);
-            this.textBox4.TabIndex = 10;
+            this.textBox4.Size = new System.Drawing.Size(190, 30);
+            this.textBox4.TabIndex = 4;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Calibri Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(676, 45);
+            this.textBox2.Location = new System.Drawing.Point(507, 37);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 36);
-            this.textBox2.TabIndex = 10;
+            this.textBox2.Size = new System.Drawing.Size(190, 30);
+            this.textBox2.TabIndex = 3;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Calibri Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(231, 45);
+            this.textBox1.Location = new System.Drawing.Point(173, 37);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 36);
-            this.textBox1.TabIndex = 11;
+            this.textBox1.Size = new System.Drawing.Size(182, 30);
+            this.textBox1.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(83, 234);
+            this.label5.Location = new System.Drawing.Point(62, 190);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 28);
+            this.label5.Size = new System.Drawing.Size(100, 23);
             this.label5.TabIndex = 5;
             this.label5.Text = "Quyền Hạn:";
             // 
@@ -233,9 +242,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(484, 143);
+            this.label2.Location = new System.Drawing.Point(363, 116);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 28);
+            this.label2.Size = new System.Drawing.Size(152, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Nhập lại mật khẩu:";
             // 
@@ -244,9 +254,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(564, 48);
+            this.label4.Location = new System.Drawing.Point(423, 39);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 28);
+            this.label4.Size = new System.Drawing.Size(87, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "Mật khẩu:";
             // 
@@ -255,9 +266,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(58, 143);
+            this.label3.Location = new System.Drawing.Point(44, 116);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 28);
+            this.label3.Size = new System.Drawing.Size(120, 23);
             this.label3.TabIndex = 7;
             this.label3.Text = "Tên nhân viên:";
             // 
@@ -266,20 +278,22 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(58, 53);
+            this.label1.Location = new System.Drawing.Point(44, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 28);
+            this.label1.Size = new System.Drawing.Size(116, 23);
             this.label1.TabIndex = 8;
             this.label1.Text = "Tên tài khoản:";
             // 
             // UserControlCreate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UserControlCreate";
-            this.Size = new System.Drawing.Size(1152, 793);
+            this.Size = new System.Drawing.Size(864, 644);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
